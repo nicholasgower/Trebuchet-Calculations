@@ -1,0 +1,13 @@
+import math
+class leverArm:
+    def __init__(name="New lever arm",L1=12,L2=6):
+        self.name=name
+        self.angle=math.radians(45) #Radians
+        self.angularVel=0 #Rad/s
+        self.angularAcc=0 #Rad/s^2
+        self.L1=L1
+        self.L2=L2
+    def update(deltaTime):
+        self.angularAcc=(g*math.sin(self.angle))/L1
+        self.angularVel+=deltaTime*self.angularAcc
+self.angle+=deltaTime*self.angularVel
