@@ -1,4 +1,5 @@
 import math
+import constants
 class leverArm:
     def __init__(name="New lever arm",L1=12,L2=6):
         self.name=name
@@ -8,6 +9,6 @@ class leverArm:
         self.L1=L1
         self.L2=L2
     def update(deltaTime):
-        self.angularAcc=(g*math.sin(self.angle))/L1
+        self.angularAcc=(constants.g*math.sin(self.angle))/L1
         self.angularVel+=deltaTime*self.angularAcc
 self.angle+=deltaTime*self.angularVel
